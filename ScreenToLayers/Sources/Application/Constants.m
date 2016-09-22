@@ -20,6 +20,9 @@ NSString * const AutoOpenFolderKey      = @"AutoOpenFolder";
 NSString * const PlayTimerSoundKey      = @"PlayTimerSound";
 NSString * const PlayFlashSoundKey      = @"PlayFlashSound";
 
+NSString * const AppleInterfaceStyleKey = @"AppleInterfaceStyle";
+NSString * const AppleInterfaceDarkKey  = @"Dark";
+
 NSString * const SupportAddress         = @"support@screentolayersapp.com";
 NSString * const WebsiteStringURL       = @"http://screentolayersapp.com";
 NSString * const GitHubStringURL        = @"https://github.com/jeremyvizzini/ScreenToLayers";

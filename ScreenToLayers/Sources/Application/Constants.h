@@ -20,6 +20,9 @@ extern NSString * const AutoOpenFolderKey;
 extern NSString * const PlayTimerSoundKey;
 extern NSString * const PlayFlashSoundKey;
 
+extern NSString * const AppleInterfaceStyleKey;
+extern NSString * const AppleInterfaceDarkKey;
+
 extern NSString * const SupportAddress;
 extern NSString * const WebsiteStringURL;
 extern NSString * const GitHubStringURL;
