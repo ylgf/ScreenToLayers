@@ -176,6 +176,10 @@ static OSStatus _hotKeyEventHandler(EventHandlerCallRef h, EventRef event, void 
 #pragma mark Timers
 
 - (void)updateProgressDegrees:(NSTimer *)timer {
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSString *styleMode = [ud stringForKey:AppleInterfaceStyleKey];
+    BOOL isDark = [styleMode isEqualToString:AppleInterfaceDarkKey];
+    
     CGFloat scale = [[NSScreen mainScreen] backingScaleFactor];
     NSRect rect = NSMakeRect(0.0,
                              0.0,
@@ -186,7 +190,7 @@ static OSStatus _hotKeyEventHandler(EventHandlerCallRef h, EventRef event, void 
     
     self.progressImage = [[NSImage alloc] initWithSize:rect.size];
     [self.progressImage lockFocus];
-    [[NSColor blackColor] setStroke];
+    [(isDark ? [NSColor whiteColor] : [NSColor blackColor]) setStroke];
     NSBezierPath *path = [NSBezierPath bezierPath];
     [path appendBezierPathWithArcWithCenter:center
                                      radius:6.5
